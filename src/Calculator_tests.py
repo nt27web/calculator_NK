@@ -2,6 +2,7 @@ import unittest
 
 from Calculator.Calculator import Calculator
 
+
 class MyTestCase(unittest.TestCase):
 
     # default test
@@ -51,6 +52,14 @@ class MyTestCase(unittest.TestCase):
     # square method test2
     def test_square_method_calculator_negative(self):
         self.assertEqual(self.calculator.square(-5), 25)
+
+    # square root test1
+    def test_square_root_method_calculator_success(self):
+        self.assertEqual(self.calculator.square_root(25), 5)
+
+    # square root test2 - accurate upto 3 decimal points
+    def test_square_root_method_calculator_success_decimal(self):
+        self.assertEqual(self.calculator.square_root(39.99), 6.324)
 
 
 if __name__ == '__main__':
