@@ -44,6 +44,14 @@ class MyTestCase(unittest.TestCase):
     def test_divide_method_calculator_zero(self):
         self.assertEqual(self.calculator.divide(5, 0), 0)
 
+    # square method test1
+    def test_square_method_calculator_success(self):
+        self.assertEqual(self.calculator.square(5), 25)
+
+    # square method test2
+    def test_square_method_calculator_negative(self):
+        self.assertEqual(self.calculator.square(-5), 25)
+
 
 if __name__ == '__main__':
     unittest.main()
