@@ -6,4 +6,4 @@
 5. Square
 6. Square root
 
-# Test cases are available with Static Inputs and Csv files
+## Test cases are available with Static Inputs and Csv files
