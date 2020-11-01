@@ -1,6 +1,7 @@
 import unittest
 
 from Calculator.Calculator import Calculator
+from CsvReader.CsvReader import CsvReader
 
 
 class MyTestCase(unittest.TestCase):
@@ -60,6 +61,13 @@ class MyTestCase(unittest.TestCase):
     # square root test2 - accurate upto 3 decimal points
     def test_square_root_method_calculator_success_decimal(self):
         self.assertEqual(self.calculator.square_root(39.99), 6.324)
+
+    def test_subtraction(self):
+        test_data = CsvReader("src/Tests/Data/UnitTestSubtraction.csv").data
+        for row in test_data:
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), result)
+            self.assertEqual(self.calculator.result, result)
 
 
 if __name__ == '__main__':
