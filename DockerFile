@@ -4,4 +4,4 @@ ADD src /src
 
 CMD ["python", "./src/CsvReader_tests.py"]
 
-#CMD ["python", "./src/Calculator_tests.py"]
+CMD ["python", "./src/Calculator_tests.py"]
