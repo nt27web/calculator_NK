@@ -12,7 +12,13 @@ class MyTestCase(unittest.TestCase):
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator, Calculator)
 
+    # addition method test1
+    def test_add_method_calculator_success(self):
+        self.assertEqual(self.calculator.add(1.36,2.78), 4.14)
 
+    # addition method test2
+    def test_add_method_calculator_zero(self):
+        self.assertEqual(self.calculator.add(-1.11, 1.11), 0)
 
 if __name__ == '__main__':
     unittest.main()
