@@ -23,15 +23,12 @@ class MyTestCase(unittest.TestCase):
 
         for value in value1:
             self.assertEqual(value.__name__, test_class1.__name__)
-            pprint(vars(value))
 
         for value in value2:
             self.assertEqual(value.__name__, test_class2.__name__)
-            pprint(vars(value))
 
         for value in result:
             self.assertEqual(value.__name__, test_class3.__name__)
-            pprint(vars(value))
 
 
 if __name__ == '__main__':
