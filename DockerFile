@@ -1,7 +1,7 @@
 FROM python:3.8
 
-ADD . .
+ADD src /src
 
-RUN pip install -r requirements.txt
+CMD ["python", "./src/CsvReaderTest.py"]
 
-CMD ["python", "-m", "unittest", "discover", "-s","/src/"]
+CMD ["python", "./src/CalculatorTest.py"]
